@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+:root{
+    --Very-dark-blue-MAIN: hsl(217, 54%, 11%);
+    --Very-dark-blue-CARD: hsl(216, 50%, 16%);
+    --Very-dark-blue-LINE: hsl(215, 32%, 27%);
+    --Cyan: hsl(181, 79%, 53%);
+    --White: hsl(0, 0%, 100%);
+}
+body{
+    background-color: var(--Very-dark-blue-MAIN);
+    height: 100vh;
+    width: 100vw;
+}
+.content-card{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-nft{
+    height: 90%;
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 2%; 
+    border-radius: 10px;
+    background-color: var(--Very-dark-blue-CARD);
+}
+
+/* img */
+
+.content-img{
+    height: 56%;
+    width: 100%;
+    position: relative;
+}
+.img-nft{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+.content-img::after{
+    --aqua: hsl(181, 79%, 53%, 0.5);
+    content: url(images/icon-view.svg);
+    background: var(--aqua);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.25s ease;
+    border-radius: 10px;
+}
+.content-img:hover::after{
+    opacity: 1;
+}
+
+/* text-info */
+.content-text-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.content-text-info h2{
+    color: white;
+}
+.content-text-info p{
+    color: var(--Very-dark-blue-LINE);
+}
+
+
+/* stats */
+.content-stats{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.content-ETH{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: small;
+    font-weight: 100;
+    color: var(--Cyan);
+}
+.content-time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: small;
+    font-weight: 100;
+    color: var(--Very-dark-blue-LINE);
+}
+
+.divider{
+    width: 100%; 
+    height: 1px;
+    background-color: white;
+}
+
+/* user */
+
+.content-user{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--Very-dark-blue-LINE);
+    font-weight: 300;
+}
+.img-user{
+    width: 12%;
+    border: 1.5px solid white;
+    border-radius: 50%;
+}
+.user-name{
+    color: white;
+}
+.user-name:hover, .content-text-info h2:hover{
+    cursor: pointer;
+    color: var(--Cyan);
+}
